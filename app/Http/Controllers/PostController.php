@@ -15,6 +15,7 @@ class PostController extends Controller
  */
     public function index(Post $post)
     {
-        return $post->get();;
+        return view('posts/index')->with(['posts' => $post->get()]);  
+        //indexに対してデータを付け加えて返す、postsという配列に対してpost1、post2とデータが入っている。
     }
 }
